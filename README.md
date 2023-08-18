@@ -1,78 +1,116 @@
-# 🏗 Scaffold-ETH 2
+# La DAO - Área de juego para Contratos Inteligentes
 
-<h4 align="center">
-  <a href="https://docs.scaffoldeth.io">Documentation</a> |
-  <a href="https://scaffoldeth.io">Website</a>
-</h4>
+**Conecta, Contribuye, Construye**
 
-🧪 An open-source, up-to-date toolkit for building decentralized applications (dapps) on the Ethereum blockchain. It's designed to make it easier for developers to create and deploy smart contracts and build user interfaces that interact with those contracts.
+Bienvenido a La DAO, una comunidad de apasionados de las finanzas descentralizadas y la tecnología.
 
-⚙️ Built using NextJS, RainbowKit, Hardhat, Wagmi, and Typescript.
+Este repositorio está dedicado para la innovación y experimentación con contratos inteligentes. El objetivo es permitir a los miembros de la comunidad interactuar con tecnologías desarrolladas por La DAO, así como otras del ecosistema.
 
-- ✅ **Contract Hot Reload**: Your frontend auto-adapts to your smart contract as you edit it.
-- 🔥 **Burner Wallet & Local Faucet**: Quickly test your application with a burner wallet and local faucet.
-- 🔐 **Integration with Wallet Providers**: Connect to different wallet providers and interact with the Ethereum network.
+Si gustas colaborar o integrar tu proyecto, contáctanos en gm@ladao.club
 
-![Debug Contracts tab](https://github.com/scaffold-eth/scaffold-eth-2/assets/55535804/1171422a-0ce4-4203-bcd4-d2d1941d198b)
+### **Flujo de colaboración**
 
-## Requirements
+Utilizamos los principios de Gitflow para el control de versiones durante el flujo de trabajo como desarrolladores.
 
-Before you begin, you need to install the following tools:
+En nuestras contribuciones, debemos considerar el modelo de creación de ramas propuesto en Gitflow, donde siempre mantendremos nuestra rama principal, `main`, así como una rama para aportar nuestras contribuciones: `dev`.
+
+Para conocer más sobre este flujo de trabajo, puedes visitar este excelente [Tutorial de Gitflow](https://www.atlassian.com/es/git/tutorials/comparing-workflows/gitflow-workflow) creado por Atlassian.
+
+### Contribuciones: cambia a la rama `dev` y crea tu rama
+
+Ejecuta el siguiente comando en la consola
+
+```bash
+  git switch dev
+```
+
+La rama dev es donde mantenemos una copia de las últimas contribuciones. Por ello, es nuestro punto de inicio para contribuir.
+
+Si deseas crear un nuevo feature o realizarás alguna otra contribución, siguiendo el modelo de trabajo Gitflow, deberás crear tu propia rama a partir de `dev`
+
+```bash
+  git checkout -b feat/<inserta-tu-feature>
+```
+
+Seamos descriptivos pero concisos con los nombres de las ramas, algunos ejemplos:
+
+- feat/contacto-pagina
+- feat/setup-auth
+- feat/api-profile-routes
+
+Para contribuciones, crea _commits_ constantemente para que los demás podamos mantener el contexto de tus contribuciones. Recomendamos seguir estas [mejores prácticas en tus commits](https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages).
+
+Una vez que tu aportación esté lista, puedes abrir un Pull Request hacia la rama `dev` y solicita revisión de otro contribuidor.
+
+## Requisitos
+
+Antes de iniciar, debes instalar las siguientes herramientas:
 
 - [Node (v18 LTS)](https://nodejs.org/en/download/)
 - Yarn ([v1](https://classic.yarnpkg.com/en/docs/install/) or [v2+](https://yarnpkg.com/getting-started/install))
 - [Git](https://git-scm.com/downloads)
 
-## Quickstart
+Este proyecto utiliza [Scaffold-ETH 2](https://scaffoldeth.io).
 
-To get started with Scaffold-ETH 2, follow the steps below:
+### Variables de ambiente
 
-1. Clone this repo & install dependencies
+En construcción...
+
+## Inicio rápido
+
+Para empezar a construir en este proyecto, seguimos las instrucciones para desarrollar con Scaffold-ETH 2.
+
+1. Clona el repositorio e instala las dependencias:
 
 ```
-git clone https://github.com/scaffold-eth/scaffold-eth-2.git
-cd scaffold-eth-2
+git clone https://github.com/La-DAO/contracts-playground.git
+cd contracts-playground
 yarn install
 ```
 
-2. Run a local network in the first terminal:
+2. Corre una red local en la primera terminal:
 
 ```
 yarn chain
 ```
 
-This command starts a local Ethereum network using Hardhat. The network runs on your local machine and can be used for testing and development. You can customize the network configuration in `hardhat.config.ts`.
+Este comando inicia una red local de Ethereum utilizando Hardhat. La red corre en localmente en tu máquina. Puedes modificar la configuración de la red en el archivo `hardhat.config.ts`.
 
-3. On a second terminal, deploy the test contract:
+3. En una segunda terminal, despliega el contrato de prueba:
 
 ```
 yarn deploy
 ```
 
-This command deploys a test smart contract to the local network. The contract is located in `packages/hardhat/contracts` and can be modified to suit your needs. The `yarn deploy` command uses the deploy script located in `packages/hardhat/deploy` to deploy the contract to the network. You can also customize the deploy script.
+Este comando despliega un contrato inteligente a la red local. El contrato está ubicado en `packages/hardhat/contracts` y puede ser modificado de acuerdo a tus necesidades. El comando `yarn deploy` utiliza el script "deploy" ubicado en `packages/hardhat/deploy` para depsplegar el contrato en la red. También puedes modificar el script.
 
-4. On a third terminal, start your NextJS app:
+4. En una tercera terminal, inicia la aplicación de NextJS:
 
 ```
 yarn start
 ```
 
-Visit your app on: `http://localhost:3000`. You can interact with your smart contract using the contract component or the example ui in the frontend. You can tweak the app config in `packages/nextjs/scaffold.config.ts`.
+Visita tu aplicación en: `http://localhost:3000`. Puedes interactuar con tu contrato inteligente utilizando el componente "contract" o el componente "example ui" en el frontend. Puedes modificar la configuración de la aplicación en el archivo `packages/nextjs/scaffold.config.ts`.
 
-Run smart contract test with `yarn hardhat:test`
+Realiza los tests de tu contrato con `yarn hardhat:test`
 
-- Edit your smart contract `YourContract.sol` in `packages/hardhat/contracts`
-- Edit your frontend in `packages/nextjs/pages`
-- Edit your deployment scripts in `packages/hardhat/deploy`
+- Edita tu contrato inteligente `YourContract.sol` en `packages/hardhat/contracts`
+- Edita tu frontend en `packages/nextjs/pages`
+- Edita tus scripts de despliegue en `packages/hardhat/deploy`
 
-## Documentation
+## Construido con Scaffold-ETH-2
 
-Visit our [docs](https://docs.scaffoldeth.io) to learn how to start building with Scaffold-ETH 2.
+<h4 align="center">
+  <a href="https://docs.scaffoldeth.io">Documentación</a> |
+  <a href="https://scaffoldeth.io">Sitio Web</a>
+</h4>
 
-To know more about its features, check out our [website](https://scaffoldeth.io).
+🧪 Un toolkit de código abierto, actualizado, para construir aplicación descentralizadas (dapps) en la blockchain de Ethereum. Diseñado para facilitar a los desarrolladores la creación y despliegue de contratos inteligentes, así como la construcción de interfaces de usuario para interactuar con dichos contratos.
 
-## Contributing to Scaffold-ETH 2
+⚙️ Construido con NextJS, RainbowKit, Hardhat, Wagmi, y Typescript.
 
-We welcome contributions to Scaffold-ETH 2!
+## Documentación Scaffold-ETH 2
 
-Please see [CONTRIBUTING.MD](https://github.com/scaffold-eth/scaffold-eth-2/blob/main/CONTRIBUTING.md) for more information and guidelines for contributing to Scaffold-ETH 2.
+Visita los [docs](https://docs.scaffoldeth.io) para aprender más sobre Scaffold-ETH 2.
+
+Para conocer más sobre sus características, puedes revisar el [sitio web de Scaffold-ETH 2](https://scaffoldeth.io).
