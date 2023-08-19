@@ -10,15 +10,16 @@ const Home: NextPage = () => {
       <div className="flex items-center flex-col flex-grow pt-10">
         <div className="px-5">
           <h1 className="text-center mb-8">
-            <span className="block text-2xl mb-2">Welcome to</span>
-            <span className="block text-4xl font-bold">Scaffold-ETH 2</span>
+            <span className="block text-2xl mb-2">Bienvenido a La DAO</span>
+            <span className="block text-4xl font-bold">Área de Juegos</span>
           </h1>
           <p className="text-center text-lg">
-            Get started by editing{" "}
+            Inicia editando{" "}
             <code className="italic bg-base-300 text-base font-bold">packages/nextjs/pages/index.tsx</code>
           </p>
           <p className="text-center text-lg">
-            Edit your smart contract <code className="italic bg-base-300 text-base font-bold">YourContract.sol</code> in{" "}
+            Edita el contrato inteligente{" "}
+            <code className="italic bg-base-300 text-base font-bold">YourContract.sol</code> en{" "}
             <code className="italic bg-base-300 text-base font-bold">packages/hardhat/contracts</code>
           </p>
         </div>
