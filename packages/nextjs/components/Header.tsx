@@ -1,5 +1,5 @@
 import React, { useCallback, useRef, useState } from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { Bars3Icon, BugAntIcon, MagnifyingGlassIcon, SparklesIcon } from "@heroicons/react/24/outline";
@@ -86,11 +86,11 @@ export const Header = () => {
           )}
         </div>
         <Link href="/" passHref className="hidden lg:flex items-center gap-2 ml-4 mr-6">
-          <div className="flex relative w-8 h-8">
+          {/* <div className="flex relative w-8 h-8">
             <Image alt="La DAO logo" className="cursor-pointer" fill src="/assets/logo/D-logo-64.svg" />
-          </div>
+          </div> */}
           <div className="flex flex-col">
-            <span className="font-bold leading-tight">La DAO</span>
+            <span className="font-bold leading-tight">La DAO x Frutero</span>
           </div>
         </Link>
         <ul className="hidden lg:flex lg:flex-nowrap menu menu-horizontal px-1 gap-2">{navLinks}</ul>

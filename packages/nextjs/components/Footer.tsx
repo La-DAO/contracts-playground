@@ -57,6 +57,10 @@ export const Footer = () => {
               <a href="https://ladao.club" target="_blank" rel="noreferrer" className="underline underline-offset-2">
                 La DAO
               </a>
+              {" x "}
+              <a href="https://frutero.club" target="_blank" rel="noreferrer" className="underline underline-offset-2">
+                Frutero
+              </a>
             </div>
             <span>·</span>
             <div>
