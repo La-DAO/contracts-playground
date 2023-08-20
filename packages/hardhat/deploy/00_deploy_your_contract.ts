@@ -1,5 +1,6 @@
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 import { DeployFunction } from "hardhat-deploy/types";
+import { ethers } from "hardhat";
 
 /**
  * Deploys a contract named "YourContract" using the deployer account and
@@ -21,10 +22,27 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
   const { deployer } = await hre.getNamedAccounts();
   const { deploy } = hre.deployments;
 
-  await deploy("YourContract", {
+  await deploy("MockERC20", {
     from: deployer,
     // Contract constructor arguments
-    args: [deployer],
+    args: [],
+    log: true,
+    // autoMine: can be passed to the deploy function to make the deployment process faster on local networks by
+    // automatically mining the contract deployment transaction. There is no effect on live networks.
+    autoMine: true,
+  });
+
+  await deploy("ERC20GatedSoulbound721", {
+    from: deployer,
+    // Contract constructor arguments
+    args: [
+      "Test Membership",
+      "TEST",
+      "https://ladao.club/test",
+      "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      ethers.utils.parseEther("5"),
+      "0x1Ad463c6Eac302D9f03d2A2aAf535627C772eDDa",
+    ],
     log: true,
     // autoMine: can be passed to the deploy function to make the deployment process faster on local networks by
     // automatically mining the contract deployment transaction. There is no effect on live networks.
