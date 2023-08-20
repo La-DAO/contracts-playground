@@ -14,8 +14,8 @@ type MetaHeaderProps = {
 const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/` : "/";
 
 export const MetaHeader = ({
-  title = "Scaffold-ETH 2 App",
-  description = "Built with 🏗 Scaffold-ETH 2",
+  title = "Pokolpok | Área de Juegos Web3",
+  description = "Área de Juegos Web3 | Creado por LaDAO x Frutero",
   image = "thumbnail.jpg",
   twitterCard = "summary_large_image",
   children,

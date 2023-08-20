@@ -90,7 +90,7 @@ export const Header = () => {
             <Image alt="La DAO logo" className="cursor-pointer" fill src="/assets/logo/D-logo-64.svg" />
           </div> */}
           <div className="flex">
-            <span className="font-semibold leading-tight">La DAO x Frutero</span>
+            <span className="font-semibold leading-tight">Pokolpok</span>
           </div>
         </Link>
         <ul className="hidden lg:flex lg:flex-nowrap menu menu-horizontal px-1 gap-2">{navLinks}</ul>
