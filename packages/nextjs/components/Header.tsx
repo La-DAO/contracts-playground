@@ -2,7 +2,7 @@ import React, { useCallback, useRef, useState } from "react";
 // import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { Bars3Icon, BugAntIcon, MagnifyingGlassIcon, SparklesIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon, BugAntIcon } from "@heroicons/react/24/outline";
 import { FaucetButton, RainbowKitCustomConnectButton } from "~~/components/scaffold-eth";
 import { useOutsideClick } from "~~/hooks/scaffold-eth";
 
@@ -42,26 +42,20 @@ export const Header = () => {
       <li>
         <NavLink href="/debug">
           <BugAntIcon className="h-4 w-4" />
-          Debug Contracts
+          Debug
         </NavLink>
       </li>
       <li>
-        <NavLink href="/example-ui">
-          <SparklesIcon className="h-4 w-4" />
-          Example UI
-        </NavLink>
+        <NavLink href="/membership">Membership NFT</NavLink>
       </li>
       <li>
-        <NavLink href="/blockexplorer">
-          <MagnifyingGlassIcon className="h-4 w-4" />
-          Block Explorer
-        </NavLink>
+        <NavLink href="/blockexplorer">Block Explorer</NavLink>
       </li>
     </>
   );
 
   return (
-    <div className="sticky lg:static top-0 navbar bg-base-100 min-h-0 flex-shrink-0 justify-between z-20 shadow-md shadow-secondary px-0 sm:px-2">
+    <div className="sticky h-16 lg:static top-0 navbar bg-base-100 min-h-0 flex-shrink-0 justify-between z-20 shadow-md shadow-secondary px-0 sm:px-2">
       <div className="w-auto lg:w-full">
         <div className="lg:hidden dropdown" ref={burgerMenuRef}>
           <label
