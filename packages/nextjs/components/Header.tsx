@@ -46,7 +46,7 @@ export const Header = () => {
         </NavLink>
       </li>
       <li>
-        <NavLink href="/membership">Membership NFT</NavLink>
+        <NavLink href="/membership-nft">Membership NFT</NavLink>
       </li>
       <li>
         <NavLink href="/blockexplorer">Block Explorer</NavLink>
