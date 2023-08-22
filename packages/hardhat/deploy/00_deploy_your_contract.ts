@@ -2,6 +2,8 @@ import { HardhatRuntimeEnvironment } from "hardhat/types";
 import { DeployFunction } from "hardhat-deploy/types";
 import { ethers } from "hardhat";
 
+const FRUTERO_MEMBERSHIP_IMAGEURI =
+  "https://ipfs.io/ipfs/bafybeicpfmbdpxum7itdparhqilo2rtiihe7zk4axigqgtmeerdj5kyara/frutero-init.png";
 /**
  * Deploys a contract named "YourContract" using the deployer account and
  * constructor arguments set to the deployer address
@@ -36,9 +38,9 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
     from: deployer,
     // Contract constructor arguments
     args: [
-      "Test Membership",
-      "TEST",
-      "https://ladao.club/test",
+      "membresía(FRTR)",
+      "FRTR",
+      FRUTERO_MEMBERSHIP_IMAGEURI,
       "0x5FbDB2315678afecb367f032d93F642f64180aa3",
       ethers.utils.parseEther("5"),
       "0x1Ad463c6Eac302D9f03d2A2aAf535627C772eDDa",

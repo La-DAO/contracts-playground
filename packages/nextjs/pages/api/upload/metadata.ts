@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { File, Web3Storage } from "web3.storage";
 
 type ResponseData = {
-  data?: { uri: string };
+  uri?: string;
   message: string;
 };
 
@@ -15,9 +15,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   const web3Storage = new Web3Storage({ token: web3StorageApiToken });
 
   const metadata = {
-    name,
-    description,
-    imageUri,
+    name: name,
+    description: description,
+    imageUri: imageUri,
     attributes: [
       {
         trait_type: "Color",
@@ -40,14 +40,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     ],
   };
 
-  const cid = await web3Storage.put([new File([Buffer.from(JSON.stringify(metadata))], `init-${tokenId}.json`)], {
+  const cid = await web3Storage.put([new File([Buffer.from(JSON.stringify(metadata))], `${tokenId}.json`)], {
     wrapWithDirectory: false,
   });
   const response = {
     // This should be ipfs://<cid>, but the centralised Lens indexer is using an Infura IPFS
     // gateway that has issues resolving CIDs when propagated through web3storage's pinning
     // service.
-    uri: `https://ipfs.io/ipfs/${cid}`,
+    uri: `ipfs://${cid}`,
   };
-  return res.status(200).json({ data: response, message: "Hello from Next.js!" });
+  return res.status(200).json({ uri: response.uri, message: "Hello from Next.js!" });
 }
